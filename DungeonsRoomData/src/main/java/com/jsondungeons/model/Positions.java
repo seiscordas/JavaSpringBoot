@@ -1,12 +1,22 @@
 package com.jsondungeons.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import java.io.Serializable;
 
-@Entity
-@Table(name = "positions")
-public class Positions extends AbstractEntity {
-    private String x;
-    private String y;
-    private String z;
+public class Positions implements Serializable {
+    private float x;
+    private float y;
+    private float z;
+
+
+    public void setX(float x) {
+        this.x = x;
+    }
+
+    public void setY(float y) {
+        this.y = y;
+    }
+
+    public void setZ(float z) {
+        this.z = z;
+    }
 }
