@@ -1,8 +1,10 @@
 package com.jsondungeons.model;
 
 
-import java.io.Serializable;
+import lombok.Data;
 
+import java.io.Serializable;
+@Data
 public class Doors  implements Serializable {
     public String direction;
     public boolean visible;

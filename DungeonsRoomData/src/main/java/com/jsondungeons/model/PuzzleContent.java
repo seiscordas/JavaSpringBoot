@@ -1,11 +1,12 @@
 package com.jsondungeons.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-
+@Data
 public class PuzzleContent {
     @JsonProperty("puzzle_content_type")
     public PuzzleContentType puzzleContentType;
@@ -15,4 +16,3 @@ public class PuzzleContent {
     public String idItemChest;
     public Positions[] positions;
 }
-enum PuzzleContentType {none, target, obstacle, show_target, chest, floor, monster, boss, portal, obj }
