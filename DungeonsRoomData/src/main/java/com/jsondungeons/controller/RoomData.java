@@ -1,11 +1,15 @@
-package com.jsondungeons.model;
+package com.jsondungeons.controller;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
-import javax.persistence.*;
+
+import javax.validation.constraints.NotNull;
+
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class RoomData extends AbstractEntity {
+public class RoomData {
+    @NotNull
     @JsonProperty("item_id")
     public String itemId;
     public Doors[] doors;

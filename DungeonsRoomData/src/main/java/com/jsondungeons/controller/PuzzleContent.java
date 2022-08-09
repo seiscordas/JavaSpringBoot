@@ -1,10 +1,7 @@
-package com.jsondungeons.model;
+package com.jsondungeons.controller;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
-
-import javax.persistence.Entity;
-import javax.persistence.Table;
 
 @Data
 public class PuzzleContent {

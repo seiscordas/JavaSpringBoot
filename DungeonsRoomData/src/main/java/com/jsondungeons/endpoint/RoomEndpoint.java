@@ -1,14 +1,17 @@
 package com.jsondungeons.endpoint;
+
 import com.google.gson.Gson;
 import com.jsondungeons.error.ResourceNotFoundException;
 import com.jsondungeons.model.JsonEntity;
-import com.jsondungeons.model.RoomData;
-import com.jsondungeons.model.RoomMap;
+import com.jsondungeons.controller.RoomData;
+import com.jsondungeons.controller.RoomMap;
 import com.jsondungeons.repository.RoomMapRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 import java.util.ArrayList;
 @RestController
 @RequestMapping("roomdatas")
@@ -31,11 +34,11 @@ public class RoomEndpoint {
     @GetMapping(path = "/{roomId}")
     public ResponseEntity<?> getRoomDataById(@PathVariable String roomId) {
         verityIfRoomExists(roomId);
-        RoomData rooms = new Gson().fromJson(roomMapDAO.findById(roomId).get().getRoom(), RoomData.class);
+        RoomData rooms = new Gson().fromJson(roomMapDAO.findById(roomId).orElseThrow().getRoom(), RoomData.class);
         return new ResponseEntity<>(rooms, HttpStatus.OK);
     }
     @PostMapping
-    public ResponseEntity<?> save(@RequestBody RoomMap roomMap) {
+    public ResponseEntity<?> save(@Valid @RequestBody RoomMap roomMap) {
         JsonEntity jsonEntity = new JsonEntity();
         for (int i = 0; i < roomMap.room.size(); i++) {
             jsonEntity.setRoom(new Gson().toJson(roomMap.room.get(i)));
@@ -47,11 +50,13 @@ public class RoomEndpoint {
     }
     @DeleteMapping(path = "/{roomId}")
     public ResponseEntity<?> delete(@PathVariable String roomId) {
+        verityIfRoomExists(roomId);
         roomMapDAO.deleteById(roomId);
         return new ResponseEntity<>(HttpStatus.OK);
     }
     @PutMapping
     public ResponseEntity<?> update(@RequestBody RoomData roomData) {
+        verityIfRoomExists(roomData.getItemId());
         JsonEntity jsonEntity = new JsonEntity();
         jsonEntity.setRoom(new Gson().toJson(roomData));
         jsonEntity.setRoomId(roomData.itemId);
@@ -59,7 +64,7 @@ public class RoomEndpoint {
         return new ResponseEntity<>(HttpStatus.OK);
     }
     private void verityIfRoomExists(String roomId){
-        if (roomMapDAO.findById(roomId) == null)
+        if (roomMapDAO.findById(roomId).isEmpty())
             throw new ResourceNotFoundException("Room not found for ID: " + roomId);
     }
 }

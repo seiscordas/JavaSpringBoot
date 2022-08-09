@@ -4,7 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1e98e3a-1041-419b-907b-6103f948a26a" name="Changes" comment="" />
+    <list default="true" id="d1e98e3a-1041-419b-907b-6103f948a26a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_2_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_7_0_4_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DungeonsRoomData/src/main/java/com/jsondungeons/error/ErrorDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DungeonsRoomData/src/main/java/com/jsondungeons/error/ResourceNotFoundDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DungeonsRoomData/src/main/java/com/jsondungeons/error/ValidationErrorDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DungeonsRoomData/src/main/java/com/jsondungeons/handler/RestExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DungeonsRoomData/src/test/java/com/jsondungeons/RoomDataEndPointTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DungeonsRoomData/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DungeonsRoomData/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DungeonsRoomData/src/main/java/com/jsondungeons/endpoint/RoomEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/DungeonsRoomData/src/main/java/com/jsondungeons/endpoint/RoomEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DungeonsRoomData/src/main/java/com/jsondungeons/model/AbstractEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DungeonsRoomData/src/main/java/com/jsondungeons/model/Doors.java" beforeDir="false" afterPath="$PROJECT_DIR$/DungeonsRoomData/src/main/java/com/jsondungeons/controller/Doors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DungeonsRoomData/src/main/java/com/jsondungeons/model/JsonEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/DungeonsRoomData/src/main/java/com/jsondungeons/model/JsonEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DungeonsRoomData/src/main/java/com/jsondungeons/model/Positions.java" beforeDir="false" afterPath="$PROJECT_DIR$/DungeonsRoomData/src/main/java/com/jsondungeons/controller/Positions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DungeonsRoomData/src/main/java/com/jsondungeons/model/PuzzleContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/DungeonsRoomData/src/main/java/com/jsondungeons/controller/PuzzleContent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DungeonsRoomData/src/main/java/com/jsondungeons/model/PuzzleContentType.java" beforeDir="false" afterPath="$PROJECT_DIR$/DungeonsRoomData/src/main/java/com/jsondungeons/controller/PuzzleContentType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DungeonsRoomData/src/main/java/com/jsondungeons/model/RoomData.java" beforeDir="false" afterPath="$PROJECT_DIR$/DungeonsRoomData/src/main/java/com/jsondungeons/controller/RoomData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DungeonsRoomData/src/main/java/com/jsondungeons/model/RoomMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/DungeonsRoomData/src/main/java/com/jsondungeons/controller/RoomMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DungeonsRoomData/src/main/java/com/jsondungeons/repository/RoomMapRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/DungeonsRoomData/src/main/java/com/jsondungeons/repository/RoomMapRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DungeonsRoomData/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/DungeonsRoomData/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DungeonsRoomData/src/test/java/com/jsondungeons/JsonDungeonsApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/DungeonsRoomData/src/test/java/com/jsondungeons/JsonDungeonsApplicationTests.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,15 +77,20 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Git/JavaSpringBoot&quot;
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Git/JavaSpringBoot&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateBuilderDialog.RecentsKey">
+      <recent name="com.jsondungeons.error" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.jsondungeons.model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ResourceNotFoundException">
+  <component name="RunManager" selected="Application.JsonDungeonsApplication">
     <configuration name="JsonDungeonsApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jsondungeons.JsonDungeonsApplication" />
       <module name="demo" />
@@ -90,10 +117,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JsonDungeonsApplicationTests.listRoomDataWhenUsernameAndPasswordAreIncorrectShouldReturnStatusCode401" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jsondungeons.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jsondungeons" />
+      <option name="MAIN_CLASS_NAME" value="com.jsondungeons.JsonDungeonsApplicationTests" />
+      <option name="METHOD_NAME" value="listRoomDataWhenUsernameAndPasswordAreIncorrectShouldReturnStatusCode401" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ResourceNotFoundException" />
         <item itemvalue="Application.JsonDungeonsApplication" />
+        <item itemvalue="JUnit.JsonDungeonsApplicationTests.listRoomDataWhenUsernameAndPasswordAreIncorrectShouldReturnStatusCode401" />
       </list>
     </recent_temporary>
   </component>

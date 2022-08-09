@@ -1,5 +1,4 @@
-package com.jsondungeons.model;
-
+package com.jsondungeons.controller;
 
 import lombok.Data;
 
